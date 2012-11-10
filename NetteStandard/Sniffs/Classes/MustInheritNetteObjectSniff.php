@@ -13,6 +13,13 @@ use PHP_CodeSniffer_File;
 class MustInheritNetteObjectSniff implements PHP_CodeSniffer_Sniff
 {
 
+	public $ignoredClasses = array(
+		"\\Nette\\Object",
+		"\\Nette\\ObjectMixin",
+	);
+
+	private $isImplementingNetteObject = array();
+
 	public function register()
 	{
 		return array(
@@ -24,7 +31,14 @@ class MustInheritNetteObjectSniff implements PHP_CodeSniffer_Sniff
 	{
 		$tokens = $phpcsFile->getTokens();
 
+		$className = $this->getClassFullQualifiedName($phpcsFile, $stackPtr, $tokens);
+
 		$pExtends = $phpcsFile->findNext(T_EXTENDS, $stackPtr, $tokens[$stackPtr]['scope_opener']);
+
+		if (in_array($className, $this->ignoredClasses)) {
+			return;
+		}
+
 		if ( $pExtends === FALSE) {
 			$phpcsFile->addError('Class not extending anything', $stackPtr);
 			return;
@@ -60,7 +74,26 @@ class MustInheritNetteObjectSniff implements PHP_CodeSniffer_Sniff
 		return ltrim($extends, '\\');
 	}
 
+	private function getClassFullQualifiedName(PHP_CodeSniffer_File $phpcsFile, $stackPtr, $tokens)
+	{
+		$className = $phpcsFile->getDeclarationName($stackPtr);
 
+		$namespacePtr = $phpcsFile->findNext(T_NAMESPACE, 0);
+		if ($namespacePtr !== FALSE) {
+			$ptr = $namespacePtr;
+			$fqn = "\\";
+			while (true) {
+				$ptr = $phpcsFile->findNext(array(T_STRING, T_NS_SEPARATOR, T_SEMICOLON), $ptr + 1);
+				if ($tokens[$ptr]['code'] === T_SEMICOLON) {
+					break;
+				}
+				$fqn .= $tokens[$ptr]['content'];
+			}
+			$className = $fqn . "\\" . $className;
+		}
+
+		return $className;
+	}
 
 	/**
 	 * Check that a given class is descendant of Nette\Object
