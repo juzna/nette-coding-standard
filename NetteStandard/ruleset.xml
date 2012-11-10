@@ -3,4 +3,5 @@
 	<description>The Nette Project coding standard.</description>
 
 	<rule ref="Generic.PHP.ClosingPHPTag"/>
+	<rule ref="Generic.WhiteSpace.DisallowSpaceIndent"/>
 </ruleset>
