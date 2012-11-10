@@ -7,10 +7,6 @@ if(defined('PHP_CODESNIFFER_IN_TESTS') === false) {
 	define('PHP_CODESNIFFER_IN_TESTS', true);
 }
 
-require_once 'tests/TestSuite.php';
-require_once 'PHPUnit/TextUI/TestRunner.php';
-include_once 'tests/Core/AllTests.php';
-include_once 'CodeSniffer.php';
 
 
 /**
