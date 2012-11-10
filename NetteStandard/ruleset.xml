@@ -6,9 +6,9 @@
         <exclude name="Generic.WhiteSpace.ScopeIndent"/><!-- We use tabs -->
         <exclude name="Generic.WhiteSpace.DisallowTabIndent"/><!-- We USE tabs-->
         <exclude name="Generic.PHP.LowerCaseConstant"/><!-- We use uppercase constants -->
-        <exclude name="PSR2.Namespaces.UseDeclaration"/><!-- We have 'em better-->
+        <exclude name="PSR2.Namespaces.UseDeclaration"/><!-- We have 'em fucked up -->
         <exclude name="PEAR.Functions.FunctionCallSignature"/><!-- ? -->
-        <exclude name="PSR2.ControlStructures.SwitchDeclaration"/><!-- ? -->
+        <exclude name="PSR2.ControlStructures.SwitchDeclaration"/><!-- Nette's style is ugly and not consistent -->
         <exclude name="Squiz.Scope.MethodScope"/><!-- squiz has it broken -->
         <exclude name="Generic.ControlStructures.InlineControlStructure.NotAllowed"/><!-- Assholes, why not? -->
         <exclude name="Generic.Files.LineLength"/><!-- we've got it modified below -->
