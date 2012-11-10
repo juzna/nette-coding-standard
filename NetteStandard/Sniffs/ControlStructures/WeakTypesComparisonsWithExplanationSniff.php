@@ -17,7 +17,7 @@ class WeakTypesComparisonsWithExplanationSniff implements PHP_CodeSniffer_Sniff
 	/** @var array When an operator is used, then commend including the text must follow */
 	public $commentMustInclude = array(
 		T_IS_EQUAL => 'intentionally ==',
-		T_IS_NOT_EQUAL => 'intentionally !=',
+		T_IS_NOT_EQUAL => 'intentionally ==',
 	);
 
 
@@ -60,7 +60,7 @@ class WeakTypesComparisonsWithExplanationSniff implements PHP_CodeSniffer_Sniff
 		}
 
 		if ( ! $hasComment) {
-			$phpcsFile->addError("Equals comparison must be commented with its purpose", $stackPtrOperator);
+			$phpcsFile->addError("Equals comparison must be commented with its purpose", $stackPtrOperator, 'Operator.' . token_name($operatorCode));
 		}
 	}
 
