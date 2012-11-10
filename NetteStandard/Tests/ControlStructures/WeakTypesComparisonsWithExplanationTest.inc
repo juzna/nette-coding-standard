@@ -11,7 +11,7 @@ if ($a !== 2) {
 	$a = 7;
 }
 
-if ($a != 2) { // intentionally !=
+if ($a != 2) { // intentionally ==
 	$a = 2;
 }
 
