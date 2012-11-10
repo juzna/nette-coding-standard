@@ -1,6 +1,10 @@
 Nette Coding Standard for PHP_CodeSniffer
 =============================================
 
+## Forks
+
+Please use a [fixed fork](https://github.com/juzna/PHP_CodeSniffer) of CodeSniffer
+
 WIP
 
 ## Usage
