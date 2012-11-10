@@ -57,7 +57,7 @@ class PHP_CodeSniffer_AllTests
 			$className = $baseNamespace . '\\' . str_replace(DIRECTORY_SEPARATOR, '\\', $className);
 
 			include_once $filePath;
-			$class = new $className('getErrorList');
+			$class = new $className($className . '::getErrorList');
 			$suite->addTest($class);
 		}
 
