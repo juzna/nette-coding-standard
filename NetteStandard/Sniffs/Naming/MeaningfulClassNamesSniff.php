@@ -1,6 +1,6 @@
 <?php
 
-namespace NetteStandard\Naming;
+namespace NetteStandard\Sniffs\Naming;
 
 use PHP_CodeSniffer_Sniff;
 use PHP_CodeSniffer_File;
