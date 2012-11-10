@@ -1,5 +1,11 @@
 <?php
 
+namespace NetteStandard\Naming;
+
+use PHP_CodeSniffer_Sniff;
+use PHP_CodeSniffer_File;
+
+
 /**
  * Rule 1: "Always choose meaningful and specific names."
  *

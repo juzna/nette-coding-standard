@@ -1,5 +1,10 @@
 <?php
 
+namespace NetteStandard\Naming;
+
+use AbstractSniffUnitTest;
+
+
 /**
  *
  *

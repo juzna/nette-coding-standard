@@ -1,11 +1,16 @@
 <?php
 
+namespace NetteStandard\ControlStructures;
+
+use AbstractSniffUnitTest;
+
+
 /**
 *
 *
 * @author Jan Dolecek <juzna.cz@gmail.com>
  */
-class WeakTypesComparisonsWithExplanationTest extends AbstractSniffUnitTest
+class ControlStructures_WeakTypesComparisonsWithExplanationTest extends AbstractSniffUnitTest
 {
 
 	public function getErrorList()

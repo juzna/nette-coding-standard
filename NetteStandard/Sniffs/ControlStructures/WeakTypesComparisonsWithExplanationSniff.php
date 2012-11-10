@@ -1,5 +1,11 @@
 <?php
 
+namespace NetteStandard\ControlStructures;
+
+use PHP_CodeSniffer_Sniff;
+use PHP_CodeSniffer_File;
+
+
 /**
  * Comparison “strong typed” operators (=== and !==) are preferred before “weak typed” ones (== and !=). If weak typed
  * comparison operator is used, the intention must be documented with a comment.
