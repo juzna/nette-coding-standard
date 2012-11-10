@@ -15,7 +15,10 @@ class MustInheritNetteObjectSniff implements PHP_CodeSniffer_Sniff
 
 	public function register()
 	{
-		// TODO: Implement register() method.
+		return array(
+			T_ABSTRACT,
+			T_EXTENDS
+		);
 	}
 
 	public function process(PHP_CodeSniffer_File $phpcsFile, $stackPtr)
