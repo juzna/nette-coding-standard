@@ -13,6 +13,7 @@
         <exclude name="Generic.ControlStructures.InlineControlStructure.NotAllowed"/><!-- Assholes, why not? -->
         <exclude name="Generic.Files.LineLength"/><!-- we've got it modified below -->
         <exclude name="PSR2.Classes.ClassDeclaration.CloseBraceAfterBody"/><!-- we've got it modified, see it below --><!-- TODO: can we just change the parameter here??? -->
+        <exclude name="Squiz.Functions.MultiLineFunctionDeclaration"/><!-- No no no please -->
     </rule>
 
     <rule ref="PSR2.Classes.ClassDeclaration">
