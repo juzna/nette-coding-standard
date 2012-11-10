@@ -5,4 +5,5 @@
 	<rule ref="Generic.PHP.ClosingPHPTag"/>
 	<rule ref="Generic.WhiteSpace.DisallowSpaceIndent"/>
 	<rule ref="Generic.Files.LineLength"/>
+	<rule ref="Generic.PHP.DisallowShortOpenTag"/>
 </ruleset>
