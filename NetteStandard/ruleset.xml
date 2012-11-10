@@ -1,4 +1,6 @@
 <?xml version="1.0"?>
 <ruleset name="Nette">
 	<description>The Nette Project coding standard.</description>
+
+	<rule ref="Generic.PHP.ClosingPHPTag"/>
 </ruleset>
