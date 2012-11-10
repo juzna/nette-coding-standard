@@ -35,7 +35,7 @@
 
     <rule ref="Generic.Formatting.SpaceAfterCast"/>
 
-    <rule ref="Generic.NamingConventions.CamelCapsFunctionName"/>
+    <rule ref="Generic.NamingConventions.CamelCapsFunctionName"/><!-- TODO: allowed _ when @internal -->
     <rule ref="Generic.NamingConventions.UpperCaseConstantName"/>
 
     <rule ref="Generic.PHP.DisallowShortOpenTag"/>
@@ -58,4 +58,11 @@
     <rule ref="Generic.Formatting.DisallowMultipleStatements.SameLine"><severity>0</severity></rule><!-- We use it (#2) --><!-- TODO: -->
     <rule ref="Squiz.ControlStructures.ControlSignature"><severity>0</severity></rule><!-- Not allowed empty one-line catch--><!-- TODO: extends and fix -->
     <rule ref="Squiz.WhiteSpace.ScopeClosingBrace.ContentBefore"><severity>0</severity></rule><!-- Allowed for empty catch blocks --><!-- TODO: should override and allow only this case -->
+
+    <!-- Needs to be resolved -->
+    <rule ref="NetteStandard.ControlStructures.WeakTypesComparisonsWithExplanation.Operator.T_IS_EQUAL"><severity>3</severity></rule><!-- #5 -->
+    <rule ref="NetteStandard.ControlStructures.WeakTypesComparisonsWithExplanation.Operator.T_IS_NOT_EQUAL"><severity>3</severity></rule><!-- #5 -->
+    <rule ref="Squiz.WhiteSpace.ScopeKeywordSpacing.Incorrect">
+        <exclude-pattern>*/PresenterComponent.php</exclude-pattern><!-- FIXME -->
+    </rule>
 </ruleset>
