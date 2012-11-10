@@ -1,10 +1,27 @@
 <?xml version="1.0"?>
 <ruleset name="Nette">
-	<description>The Nette Project coding standard.</description>
+    <description>The Nette Project coding standard.</description>
 
-	<rule ref="Generic.PHP.ClosingPHPTag"/>
-	<rule ref="Generic.WhiteSpace.DisallowSpaceIndent"/>
-	<rule ref="Generic.Files.LineLength"/>
-	<rule ref="Generic.PHP.DisallowShortOpenTag"/>
-	<rule ref="Squiz.Classes.ValidClassName"/>
+    <rule ref="Generic.Classes.DuplicateClassName"/>
+
+    <rule ref="Generic.Files.LineLength"/>
+    <rule ref="Generic.Files.OneInterfacePerFile"/>
+    <rule ref="Generic.Files.ByteOrderMark"/>
+
+    <rule ref="Generic.Formatting.SpaceAfterCast"/>
+
+    <rule ref="Generic.NamingConventions.CamelCapsFunctionName"/>
+    <rule ref="Generic.NamingConventions.UpperCaseConstantName"/>
+
+    <rule ref="Generic.PHP.ClosingPHPTag"/>
+    <rule ref="Generic.PHP.DisallowShortOpenTag"/>
+    <rule ref="Generic.PHP.UpperCaseConstant"/>
+
+    <rule ref="Generic.Functions.OpeningFunctionBraceBsdAllman"/>
+
+    <rule ref="Generic.WhiteSpace.DisallowSpaceIndent"/>
+
+    <rule ref="MySource.Objects.AssignThis"/>
+
+    <rule ref="Squiz.Classes.ValidClassName"/>
 </ruleset>
