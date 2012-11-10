@@ -26,7 +26,7 @@ class PHP_CodeSniffer_AllTests
 	public static function suite()
 	{
 		$baseDir = realpath(__DIR__ . '/../NetteStandard/Tests');
-		return self::getSuite('PHP Nette Coding Standard', $baseDir, 'NetteStandard');
+		return self::getSuite('PHP Nette Coding Standard', $baseDir, 'NetteStandard\\Tests');
 	}
 
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace NetteStandard\Naming;
+namespace NetteStandard\Tests\Naming;
 
 use AbstractSniffUnitTest;
 

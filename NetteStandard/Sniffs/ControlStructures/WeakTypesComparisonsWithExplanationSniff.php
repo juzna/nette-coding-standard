@@ -1,6 +1,6 @@
 <?php
 
-namespace NetteStandard\ControlStructures;
+namespace NetteStandard\Sniffs\ControlStructures;
 
 use PHP_CodeSniffer_Sniff;
 use PHP_CodeSniffer_File;

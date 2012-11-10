@@ -1,6 +1,6 @@
 <?php
 
-namespace NetteStandard\ControlStructures;
+namespace NetteStandard\Tests\ControlStructures;
 
 use AbstractSniffUnitTest;
 

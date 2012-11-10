@@ -85,10 +85,11 @@ abstract class AbstractSniffUnitTest extends PHPUnit_Framework_TestCase
         $basename = substr(get_class($this), 0, -4);
 
         // The name of the coding standard we are testing.
-        $standardName = substr($basename, 0, strpos($basename, '\\'));
+        $standard = realpath(__DIR__ . '/../NetteStandard/ruleset.xml'); // HACK
+         // substr($basename, 0, strpos($basename, '\\'));
 
         // The class name of the sniff we are testing.
-        $sniffClass = $basename . 'Sniff';
+	    $sniffClass = str_replace('\\Tests\\', '\\Sniffs\\', $basename).'Sniff';
 
 	    $rc = new ReflectionClass($this);
 	    $testFileName = $rc->getFileName();
@@ -104,7 +105,7 @@ abstract class AbstractSniffUnitTest extends PHPUnit_Framework_TestCase
         // Get them in order.
         sort($testFiles);
 
-        self::$phpcs->process(array(), $standardName, array($sniffClass));
+        self::$phpcs->process(array(), $standard, array($sniffClass));
         self::$phpcs->setIgnorePatterns(array());
 
         $failureMessages = array();
