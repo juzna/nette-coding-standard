@@ -2,6 +2,23 @@
 <ruleset name="Nette">
     <description>The Nette Project coding standard.</description>
 
+    <rule ref="PSR2">
+        <exclude name="Generic.WhiteSpace.ScopeIndent"/><!-- We use tabs -->
+        <exclude name="Generic.WhiteSpace.DisallowTabIndent"/><!-- We USE tabs-->
+        <exclude name="Generic.PHP.LowerCaseConstant"/><!-- We use uppercase constants -->
+        <exclude name="PSR2.Namespaces.UseDeclaration"/><!-- We have 'em better-->
+        <exclude name="PEAR.Functions.FunctionCallSignature"/><!-- ? -->
+        <exclude name="PSR2.ControlStructures.SwitchDeclaration"/><!-- ? -->
+        <exclude name="Squiz.Scope.MethodScope"/><!-- squiz has it broken -->
+        <exclude name="Generic.ControlStructures.InlineControlStructure.NotAllowed"/><!-- Assholes, why not? -->
+    </rule>
+
+    <rule ref="PSR2.Classes.ClassDeclaration">
+        <properties>
+            <property name="numBlankLinesBeforeClosingBrace">1</property><!-- They don't have 1 blank line-->
+        </properties>
+    </rule>
+
     <rule ref="Generic.Classes.DuplicateClassName"/>
 
     <rule ref="Generic.Files.LineLength">
@@ -31,4 +48,12 @@
 
     <rule ref="Squiz.Classes.LowercaseClassKeywords"/>
     <rule ref="Squiz.Classes.ValidClassName"/>
+
+    <!-- Mismatch against PSR2 which needs to be fixed properly -->
+    <rule ref="Squiz.Functions.MultiLineFunctionDeclaration.SpaceAfterFunction"><severity>0</severity></rule><!-- Mute; we ain't got no space in closure def --><!-- TODO: make sure it's not there -->
+    <rule ref="PSR2.Classes.ClassDeclaration.CloseBraceAfterBody"><severity>0</severity></rule><!-- we've got it modified, see it below --><!-- TODO: can we just change the parameter here??? -->
+    <rule ref="PSR1.Classes.ClassDeclaration.MultipleClasses"><severity>0</severity></rule><!-- we allow this for exceptions --><!-- TODO: make sure that only for exceptions -->
+    <rule ref="Generic.Formatting.DisallowMultipleStatements.SameLine"><severity>0</severity></rule><!-- We use it (#2) --><!-- TODO: -->
+    <rule ref="Squiz.ControlStructures.ControlSignature"><severity>0</severity></rule><!-- Not allowed empty one-line catch--><!-- TODO: extends and fix -->
+    <rule ref="Squiz.WhiteSpace.ScopeClosingBrace.ContentBefore"><severity>0</severity></rule><!-- Allowed for empty catch blocks --><!-- TODO: should override and allow only this case -->
 </ruleset>
