@@ -10,7 +10,7 @@ use AbstractSniffUnitTest;
 *
 * @author Jan Dolecek <juzna.cz@gmail.com>
  */
-class ControlStructures_WeakTypesComparisonsWithExplanationTest extends AbstractSniffUnitTest
+class WeakTypesComparisonsWithExplanationTest extends AbstractSniffUnitTest
 {
 
 	public function getErrorList()
