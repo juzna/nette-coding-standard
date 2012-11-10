@@ -14,8 +14,30 @@ class MustInheritNetteObjectSniff implements PHP_CodeSniffer_Sniff
 {
 
 	public $ignoredClasses = array(
-		"\\Nette\\Object",
-		"\\Nette\\ObjectMixin",
+		"Nette\\Object",
+		"Nette\\ObjectMixin",
+		"Nette\\Application\\PresenterFactory",
+		"Nette\\Config\\Helpers",
+		"Nette\\DI\\Helpers",
+		"Nette\\Database\\Helpers",
+		"Nette\\Diagnostics\\Debugger",
+		"Nette\\Diagnostics\\Dumper",
+		"Nette\\Diagnostics\\Helpers",
+		"Nette\\PhpGenerator\\Helpers",
+		"Nette\\PhpGenerator\\PhpLiteral",
+		"Nette\\Reflection\\AnnotationsParser",
+		"Nette\\Templating\\Helpers",
+		"Nette\\Utils\\Arrays",
+		"Nette\\Utils\\Json",
+		"Nette\\Utils\\LimitedScope",
+		"Nette\\Utils\\Tokenizer",
+		"Nette\\Utils\\Strings",
+		"Nette\\Utils\\SafeStream",
+		"Nette\\Utils\\MimeTypeDetector",
+		"Nette\\Environment",
+		"Nette\\Framework",
+		"Nette\\Object",      
+		"Nette\\ObjectMixin",
 	);
 
 	private $isImplementingNetteObject = array();
@@ -81,7 +103,7 @@ class MustInheritNetteObjectSniff implements PHP_CodeSniffer_Sniff
 		$namespacePtr = $phpcsFile->findNext(T_NAMESPACE, 0);
 		if ($namespacePtr !== FALSE) {
 			$ptr = $namespacePtr;
-			$fqn = "\\";
+			$fqn = "";
 			while (true) {
 				$ptr = $phpcsFile->findNext(array(T_STRING, T_NS_SEPARATOR, T_SEMICOLON), $ptr + 1);
 				if ($tokens[$ptr]['code'] === T_SEMICOLON) {
