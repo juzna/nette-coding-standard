@@ -11,12 +11,12 @@
         <exclude name="PSR2.ControlStructures.SwitchDeclaration"/><!-- Nette's style is ugly and not consistent -->
         <exclude name="Squiz.Scope.MethodScope"/><!-- squiz has it broken -->
         <exclude name="Generic.ControlStructures.InlineControlStructure.NotAllowed"/><!-- Assholes, why not? -->
-        <exclude name="Generic.Files.LineLength"/><!-- we've got it modified below -->
-        <exclude name="PSR2.Classes.ClassDeclaration.CloseBraceAfterBody"/><!-- we've got it modified, see it below --><!-- TODO: can we just change the parameter here??? -->
+        <exclude name="Generic.Files.LineLength"/><!-- we've got it modified below --><!-- TODO: can we just change the parameter here??? -->
+        <exclude name="PSR2.Classes.ClassDeclaration"/><!-- we've got it fixed -->
         <exclude name="Squiz.Functions.MultiLineFunctionDeclaration"/><!-- No no no please -->
     </rule>
 
-    <rule ref="PSR2.Classes.ClassDeclaration">
+    <rule ref="Nette.Classes.ClassDeclaration">
         <properties>
             <property name="numBlankLinesBeforeClosingBrace">1</property><!-- They don't have 1 blank line-->
         </properties>
