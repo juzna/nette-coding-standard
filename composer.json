@@ -1,0 +1,11 @@
+{
+	"name" : "juzna/nette-coding-standard",
+	"description" : "CodeSniffer rules for Nette Framework",
+	"homepage" : "https://github.com/juzna/nette-coding-standard",
+	"authors" : [
+		{
+			"name"  : "Jan Doleček",
+			"email" : "juzna.cz@gmail.com"
+		}
+	]
+}
